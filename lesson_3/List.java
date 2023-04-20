@@ -6,7 +6,7 @@ package lesson_3;
 public class List {
 
     private Node head;
-
+    // private Node tail;
 
     private class Node {
 
@@ -101,4 +101,28 @@ public void removeLast(){
 }
 // Задание 4 
 
+// Homework seminar 3
+//  Необходимо реализовать метод разворота связного списка (двухсвязного или односвязного на выбор).
+
+
+public void revert(){
+    // Node nextNode = new Node();
+    // Node node = new Node();
+    Node previous = null;
+    Node current = head;
+
+
+    // Меняем местами указатели на head и tail
+    // Node temp = head;
+    // head = tail;
+    // tail = temp;
+
+    while(current != null){
+
+        Node next = current.next;
+        current.next = previous;    // фиксируем текущий узел
+        previous = current;
+        current = next;
+    }
+}
 }
